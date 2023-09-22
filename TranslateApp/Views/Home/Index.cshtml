@@ -1,0 +1,65 @@
+﻿@model TranslateApp.ViewModels.Request.TranslationRequestViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="navbar-container">
+</div>
+<div class="main-container">
+    <section class="space-sm">
+        <div class="container">
+            <div class="row mb-5">
+                <!--end of col-->
+            </div>
+            <!--end of row-->
+            <div class="row flex-md-row card card-md">
+                <div class="card-body">
+                    <div class="text-center mb-5">
+                        <h1 class="h2 mb-2">Type your text below to convert to Yodish using our Yoda Speak translator
+                        </h1>
+                        <span>English to Yodish </span>
+                    </div>
+                    <div class="text-center mb-3">
+                        @* <h1>Translate Text</h1> *@
+
+                        @if (ViewBag.Translated != null)
+                        {
+                            <h3 class="alert alert-success">
+                                <strong>Translation Result:</strong> @ViewBag.Translated
+                            </h3>
+                        }
+
+                        @if (ViewBag.ErrorMessage != null)
+                        {
+                            <h3 class="alert alert-danger">
+                                <strong>Error:</strong> @ViewBag.ErrorMessage
+                            </h3>
+                        }
+
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-10">
+                            <form asp-action="Index" novalidate>
+                                <div class="form-row form-group mb-3">
+                                    <div class="col">
+                                        <label asp-for="Text" class="mb-3">Enter text for translation:</label>
+                                        <textarea asp-for="Text" name="Text" class="form-control" rows="7"
+                                            placeholder="Please type in your text here so that our Yoda Speak translator can do the magic and convert to  Yodish!"></textarea>
+                                        <span asp-validation-for="Text" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="form-row form-group">
+                                    <div class="col-12">
+                                        <button class="btn btn-block btn-info btn-lg" type="submit">Translate</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

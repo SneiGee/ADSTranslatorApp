@@ -1,0 +1,6 @@
+{
+  "DatabaseSettings": {
+    "DBProvider": "mssql",
+    "ConnectionString": "Server=localhost;Database=TranslateDb;User=SA;Password=Michael@20;TrustServerCertificate=true;MultipleActiveResultSets=true;Encrypt=false"
+  }
+}

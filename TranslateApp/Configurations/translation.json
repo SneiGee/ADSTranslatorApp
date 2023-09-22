@@ -1,0 +1,5 @@
+{
+    "TranslationApiConfig": {
+        "BaseUrl": "https://api.funtranslations.com/translate/"
+    }
+}

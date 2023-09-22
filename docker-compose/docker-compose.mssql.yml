@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Michael@20
+      - ACCEPT_EULA=Y
+      - ConnectionStrings__DefaultConnection=Server=mssql;Database=TranslateDb;User=SA;Password=Michael@20;MultipleActiveResultSets=true;Encrypt=false
+    container_name: translateApp
+    volumes:
+      - mssql-data:/data/db
+    ports:
+      - "1433:1433"
+volumes:
+  mssql-data:

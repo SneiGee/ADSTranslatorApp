@@ -1,0 +1,19 @@
+@model TranslateApp.ViewModels.Request.TranslationRequestViewModel
+
+@{
+    ViewData["Title"] = "Translation Result";
+}
+
+<h1>Translation Result</h1>
+
+<div class="alert alert-success">
+    <strong>Original Text:</strong> @Model.Text
+</div>
+
+@* <div class="alert alert-success">
+    <strong>Translated Text:</strong> @Model.Translated
+</div> *@
+
+<p>
+    <a asp-action="Index">Back to Input</a>
+</p>

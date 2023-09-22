@@ -1,0 +1,7 @@
+{
+  "LoggerSettings": {
+    "AppName": "AFS Translator",
+    "WriteToFile": false,
+    "StructuredConsoleLogging": true
+  }
+}
