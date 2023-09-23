@@ -19,7 +19,7 @@ internal class DatabaseInitializer : IDatabaseInitializer
         await InitializeApplicationDbForUserAsync(cancellationToken);
 
         _logger.LogInformation("Welcome to Advance Field App - Webs & Mobile Apps API ");
-        _logger.LogInformation("For documentations and guides, visit https://github.com/SneiGee/KeyDetectApp/tree/master/Docs/Api");
+        _logger.LogInformation("For documentations and guides, visit https://github.com/SneiGee/ADSTranslatorApp");
         _logger.LogInformation("Build by MICHAEL SCHNEIDER! -:)");
     }
 
