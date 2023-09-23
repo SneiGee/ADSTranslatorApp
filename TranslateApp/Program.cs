@@ -12,7 +12,7 @@ try
     var builder = WebApplication.CreateBuilder(args);
 
     // Add services to the container.
-    builder.AddConfigurations().RegisterSerilog();  
+    builder.AddConfigurations().RegisterSerilog();
     builder.Services.AddControllersWithViews();
     builder.Services
         .AddApplicationServices(builder.Configuration)
@@ -35,6 +35,7 @@ try
 
     app.UseRouting();
 
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllerRoute(

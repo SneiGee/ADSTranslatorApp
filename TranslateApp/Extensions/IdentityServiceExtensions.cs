@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using TranslateApp.Common.Persistence;
 using TranslateApp.Common.Persistence.Initialization;
@@ -23,6 +24,9 @@ public static class IdentityServiceExtensions
                     options.User.RequireUniqueEmail = true;
                 })
                 .AddEntityFrameworkStores<TranslateDbContext>();
+        services.AddSession();
+        services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+               .AddCookie();
 
         return services
             .AddPersistence();
